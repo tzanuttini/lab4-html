@@ -1,0 +1,28 @@
+body{
+    width: 200px;
+    margin:0 auto;
+}
+.conteiner{
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    background-color:red;
+}
+#visor{
+    height:50px;
+    width: 200px;
+    background-color:yellow;
+    color:black;
+    text-align: right;
+}
+#numero{
+    display: flex;
+    flex-wrap:wrap;
+}
+#numero .btn{
+    width: calc(25%-10px);
+    height:25%;
+    margin:5px;
+}
