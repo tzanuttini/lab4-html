@@ -27,28 +27,33 @@ function igual() {
     var b = document.getElementById("visor");
     if (document.getElementById("visor").innerText != null) {
         segundovalor = parseInt(document.getElementById("visor").innerText);
+        var result;
         switch (oper) {
             case '+':
-                primervalor += segundovalor;
-                b.innerText = primervalor.toString();
+                result = primervalor + segundovalor;
+                b.innerText = result.toString();
                 break;
             case '-':
-                primervalor -= segundovalor;
-                b.innerText = primervalor.toString();
+                result = primervalor - segundovalor;
+                b.innerText = result.toString();
                 break;
             case '/':
                 if (segundovalor != 0) {
-                    primervalor = primervalor / segundovalor;
-                    b.innerText = primervalor.toString();
+                    result = primervalor / segundovalor;
+                    b.innerText = result.toString();
                 } else {
                     window.alert("Delirante no se puede divir por 0");
                 }
                 break;
             case '*':
-                primervalor *= segundovalor;
-                b.innerText = primervalor.toString();
+                result = primervalor * segundovalor;
+                b.innerText = result.toString();
                 break;
         }
+        var historial = document.getElementById("historial");
+        var resultado = document.createElement("li");
+        resultado.innerText = primervalor+oper+segundovalor+" = "+result;
+        historial.append(resultado);
     } else {
         window.alert("Flaco pone un numero!");
     }

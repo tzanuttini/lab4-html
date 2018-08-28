@@ -26,3 +26,8 @@ body{
     height:25%;
     margin:5px;
 }
+li{
+    background-color:white;
+    list-style: none;
+    text-align: center;
+}
